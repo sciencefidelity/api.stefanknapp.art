@@ -6,7 +6,7 @@ const colors = {
   lightOrange: '#f64d0a',
   yellow: '#ffd500',
   green: '#6dbb1a',
-  blue: '#0097f7',
+  blue: '#0056b3',
   teal: '#5bc0de',
   pink: '#ff5b77',
   purple: '#613d7c',
@@ -34,16 +34,16 @@ const colors = {
     'background-alpha': 'rgba(14, 22, 34, 0.02)',
   },
   leftMenu: {
-    'link-hover': '#1c2431',
+    'link-hover': '#2d2d2d',
     'link-color': '#919bae',
     'title-color': '#5b626f',
   },
   strapi: {
     'gray-light': '#eff3f6',
     gray: '#535f76',
-    'blue-darker': '#18202e',
+    'blue-darker': '#252525',
     'blue-dark': '#151c2e',
-    blue: '#0097f7',
+    blue: '#0056b3',
   },
 };
 

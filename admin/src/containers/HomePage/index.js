@@ -69,13 +69,16 @@ const HomePage = ({ history: { push } }) => {
         <div className="row">
           <div className="col-lg-8 col-md-12">
             <Block>
-              <img src="./sknapp.jpg" alt="" />
+              <img src="http://localhost:1337/uploads/sknapparchive_02_bw_50b646c56f.jpg" style={{ paddingTop: 10 }}/>
             </Block>
           </div>
 
           <div className="col-md-12 col-lg-4">
-            <Block style={{ paddingRight: 30, paddingBottom: 0 }}>
-
+            <Block style={{ paddingRight: 30, paddingBottom: 30 }}>
+              <h2 style={{ paddingBottom: 10 }}>Links</h2>
+              <p><a href="https://archive.stefanknapp.art">Stefan Knapp Archive</a></p>
+              <p><a href="https://stefanknapp.art">Stefan Knapp Estate</a></p>
+              <p><a href="https://midwalesarts.org.uk">Mid Wales Arts</a></p>
             </Block>
           </div>
         </div>
