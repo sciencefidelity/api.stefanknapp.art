@@ -1,8 +1,8 @@
 {
-  "name": "my-project",
+  "name": "stefan-knapp-archive",
   "private": true,
   "version": "0.1.0",
-  "description": "A Strapi application",
+  "description": "Archive application",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -24,14 +24,13 @@
     "sqlite3": "5.0.0"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Matt Cook <matt@sciencefidelity.co.uk>"
   },
   "strapi": {
     "uuid": "8043a15e-4eda-423f-a1a5-13c7e11226ec"
   },
   "engines": {
     "node": ">=10.16.0 <=14.x.x",
-    "npm": "^6.0.0"
   },
   "license": "MIT"
 }
