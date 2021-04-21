@@ -1,6 +1,7 @@
-node_modules/
-build/
-.tmp/
+node_modules
+build
+.tmp
+.cache
 
 *.log
 .DS_Store
