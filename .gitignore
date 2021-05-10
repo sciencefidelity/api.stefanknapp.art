@@ -1,10 +1,12 @@
-node_modules
-build
-.tmp
-.cache
+*
 
-*.log
+!*.*
+
+!*/
+
+.env
+.smb*
+*.bak
 .DS_Store
 
 .nova
-*.bak
