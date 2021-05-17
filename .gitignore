@@ -8,5 +8,9 @@
 .smb*
 *.bak
 .DS_Store
+tmp/
+*.log
+*.css
+*.css.map
 
 .nova
