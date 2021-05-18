@@ -10,7 +10,7 @@
 <body>
   <main>
     <header class="header">
-      <a class="header__logo" href="/">🪐 Saturn</a>
+      <a class="header__logo" href="/">Saturn</a>
       <form action="/search" method="GET" class="header__form">
         <input
           autofocus
@@ -22,7 +22,7 @@
         />
       </form>
       <a
-        href="https://github.com/sciencefidelity/neptune.land/saturn/"
+        href="https://github.com/sciencefidelity/neptune.land/"
         class="button button--github"
         >View on GitHub</a
       >
@@ -64,7 +64,7 @@
           <a 
             href="/search?q={{ .Query }}&page={{ .PreviousPage }}"
             class="button button--previous"
-          >Previous</a>
+          >Prev</a>
           {{ end }}
           {{ if (ne .IsLastPage true) }}
           <a 

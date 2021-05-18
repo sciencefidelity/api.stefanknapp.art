@@ -13,39 +13,21 @@
 html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   font-size: 1.6rem;
+  color: c.$grey-050;
+  background: c.$grey-850;
 }
 
 a {
   text-decoration: none;
-  color: #333;
+  color: c.$grey-150;
   &:hover {
     text-decoration: underline;
-  }
-}
-
-.button {
-  border: 0.2rem solid #004400;
-  color: c.$dark-green;
-  border-radius: 0.44rem;
-  padding: 0.6rem 2.4rem;
-  font-size: 1.4rem;
-  font-weight: 400;
-  &--previous {
-    margin-right: 2rem;
-  }
-  &:hover {
-    text-decoration: none;
-    background-color: c.$dark-green;
-    color: c.$light-green;
-  }
-  @include b.mq(sm) {
-    &--github {
-      display: none;
-    }
   }
 }
 
@@ -58,22 +40,28 @@ a {
   right: 0;
   display: flex;
   justify-content: space-between;
-  background-color: c.$light-green;
+  background-color: c.$grey-900;
   padding: 0.5rem 1rem;
   align-items: center;
   &__logo {
-    color: #002200;
+    color: c.$grey-050;
+    font-weight: 700;
+    font-size: 2.2rem;
   }
   &__search {
     width: 50rem;
     height: 100%;
-    border-radius: 0.4rem;
+    border-radius: 10rem;
     border: none;
-    background: c.$dark-green;
-    color: c.$light-green;
+    background: c.$grey-800;
+    color: c.$grey-050;
     font-size: 1.6rem;
     line-height: 1.4;
-    padding-left: 0.5rem;
+    padding-left: 1.5rem;
+    &:focus {
+      outline: none;
+      background: c.$grey-750;
+    }
   }
   &__form {
     height: calc(100% - 1rem);
@@ -93,6 +81,29 @@ a {
   }
 }
 
+.button {
+  border: 0.2rem solid c.$grey-550;
+  color: c.$grey-350;
+  border-radius: 10rem;
+  padding: 0.6rem 2.4rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  &--previous {
+    margin-right: 2rem;
+  }
+  &:hover {
+    text-decoration: none;
+    background: c.$grey-850;
+    border: 0.2rem solid c.$grey-350;
+    color: c.$grey-150;
+  }
+  @include b.mq(sm) {
+    &--github {
+      display: none;
+    }
+  }
+}
+
 .container {
   width: 100%;
   max-width: 72rem;
@@ -101,7 +112,7 @@ a {
 }
 
 .result-count {
-  color: c.$dark-grey;
+  color: c.$grey-150;
   text-align: center;
   margin-bottom: 1.5rem;
 }
@@ -114,7 +125,7 @@ a {
   display: flex;
   align-items: flex-start;
   margin-bottom: 3rem;
-  border: 0.1rem solid c.$light-grey;
+  border: 0.1rem solid c.$grey-050;
   padding: 1.5rem;
   border-radius: 0.4rem;
   justify-content: space-between;
@@ -138,7 +149,7 @@ a {
 }
 
 .description {
-  color: c.$dark-grey;
+  color: c.$grey-050;
   margin-bottom: 1.5rem;
   @include b.mq(sm) {
     font-size: 1.4rem;
@@ -147,7 +158,7 @@ a {
 
 .metadata {
   display: flex;
-  color: c.$dark-green;
+  color: c.$grey-350;
   font-size: 1.4rem;
 }
 
@@ -160,4 +171,5 @@ a {
 
 .pagination {
   margin-top: 2rem;
+  text-align: center;
 }
