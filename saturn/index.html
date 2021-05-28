@@ -24,8 +24,9 @@
       <a
         href="https://github.com/sciencefidelity/neptune.land/"
         class="button button--github"
-        >View on GitHub</a
       >
+        View on GitHub
+      </a>
     </header>
     <section class="container">
       <div class="result-count">
@@ -61,16 +62,20 @@
       <div class="pagination">
         {{ if . }}
           {{ if (gt .NextPage 2) }}
-          <a 
+          <a
             href="/search?q={{ .Query }}&page={{ .PreviousPage }}"
             class="button button--previous"
-          >Prev</a>
+          >
+            Prev
+          </a>
           {{ end }}
           {{ if (ne .IsLastPage true) }}
-          <a 
-            href="/search?q={{ .Query }}&page={{ .NextPage }}" 
+          <a
+            href="/search?q={{ .Query }}&page={{ .NextPage }}"
             class="button"
-          >Next</a>
+          >
+            Next
+          </a>
           {{ end }}
         {{ end }}
       </div>
