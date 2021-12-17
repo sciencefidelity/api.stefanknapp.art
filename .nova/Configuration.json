@@ -3,5 +3,6 @@
   "apexskier.typescript.config.organizeImportsOnSave" : "false",
   "tommasonegri.vue.config.vetur.completion.autoImport" : "Disable",
   "workspace.art_style" : 1,
-  "workspace.color" : 3
+  "workspace.color" : 3,
+  "workspace.name" : "Neptune"
 }
