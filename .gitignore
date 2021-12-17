@@ -1,11 +1,4 @@
-*
-
-!*.*
-
-!*/
-
 .env
-.smb*
 *.bak
 .DS_Store
 tmp/
