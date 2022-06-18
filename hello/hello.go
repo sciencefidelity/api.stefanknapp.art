@@ -1,9 +1,18 @@
 package main
 
-import "fmt"
-
-import "rsc.io/quote"
+import (
+  "fmt"
+  "log"
+  "github.com/sciencefidelity/greetings"
+)
 
 func main() {
-  fmt.Println(quote.Go())
+  log.SetPrefix("greetings: ")
+  log.SetFlags(0)
+
+  message, err := greetings.Hello("")
+  if err != nil {
+    log.Fatal(err)
+  }
+  fmt.Println(message)
 }
