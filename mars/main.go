@@ -2,6 +2,10 @@ package main
 
 import "fmt"
 
+type Number interface {
+	int64 | float64
+}
+
 func main() {
 	ints := map[string]int64{
 		"first": 34,
@@ -13,7 +17,18 @@ func main() {
 		"second": 26.99,
 	}
 
-	fmt.Printf("Non-generic Sums: %v and %v\n", SumInts(ints), SumFloats(floats))
+	fmt.Printf("Non-generic Sums: %v and %v\n",
+		SumInts(ints),
+		SumFloats(floats))
+	fmt.Printf("Generic Sums: %v and %v\n",
+		SumIntsOfFloats[string, int64](ints),
+		SumIntsOfFloats[string, float64](floats))
+	fmt.Printf("Generic Sums, type parameters inferred: %v and %v\n",
+		SumIntsOfFloats(ints),
+		SumIntsOfFloats(floats))
+	fmt.Printf("Generic Sums with Contraint: %v and %v\n",
+		SumNumbers(ints),
+		SumNumbers(floats))
 }
 
 func SumInts(m map[string]int64) int64 {
@@ -32,6 +47,19 @@ func SumFloats(m map[string]float64) float64 {
 	return s
 }
 
+func SumIntsOfFloats[k comparable, V int64 | float64](m map[k]V) V {
+	var s V
+	for _, v := range m {
+		s += v
+	}
+	return s
+}
 
-
+func SumNumbers[K comparable, V Number](m map[K]V) V {
+	var s V
+	for _, v := range m {
+		s += v
+	}
+	return s
+}
 
