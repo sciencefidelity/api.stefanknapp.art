@@ -32,7 +32,7 @@ func handleConnection(commandChannel chan commandMessage, client net.Conn) {
 		netData, err := bufio.NewReader(client).ReadString('\n')
 		if err != nil {
 			fmt.Println("error reading:", err)
-			break
+			return
 		}
 
 		var response string
@@ -87,7 +87,7 @@ func handleConnection(commandChannel chan commandMessage, client net.Conn) {
 		case "DEL":
 			key := parts[1]
 			commandMessage := commandMessage{
-				commandName:     Incr,
+				commandName:     Del,
 				key:             key,
 				responseChannel: make(chan string)}
 
